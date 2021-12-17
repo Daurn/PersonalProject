@@ -1,0 +1,10 @@
+<input matInput  type="text" [(ngModel)]="inputData">
+<button mat-button (click)="add()">Ajouter tache</button>
+<button mat-button (click)="deleteAll()">Supprimer toutes les tâches</button>
+<div *ngIf="todo.length > 0">
+  <ul *ngFor="let task of todo; index as i;">
+    <li>
+      <app-task [content]=task [taskIndex]=i (deleteOutput)="delete($event)"></app-task>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,4 @@
+<input matInput  type="text" [(ngModel)]="index">
+<button mat-button (click)="httpCall(index)">Requete Http</button>
+
+<p>{{this.request.userId}} {{this.request.id}} {{this.request.title}} {{this.request.completed}}</p>
